@@ -1,0 +1,15 @@
+apiversion: v1
+kind: PersistentVolume
+metadata:
+    name: pv1002
+spec:
+    capacity:
+        storage: 200Gi
+    accessModes:
+    - ReadWriteMany
+    - ReadWriteOnce
+    - ReadOnlyMany
+    nfs:
+        path: /export/v003
+        server: 192.168.42.1
+    persistentVolumeReclaimPolicy: Recycle
