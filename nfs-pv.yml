@@ -1,13 +1,74 @@
 apiversion: v1
 kind: PersistentVolume
-metadata:
+  metadata:
     name: pv1000
-spec:
+  spec:
     capacity:
-        storage: 900Gi
+      storage: 200Gi
     accessModes:
     - ReadWriteMany
+    - ReadWriteOnce
+    - ReadOnlyMany
     nfs:
-        path: /export
-        server: 192.168.42.1
+      path: /export/v001
+      server: 192.168.42.1
+    persistentVolumeReclaimPolicy: Recycle
+- kind: PersistentVolume
+  metadata:
+    name: pv1001
+  spec:
+    capacity:
+      storage: 200Gi
+    accessModes:
+    - ReadWriteMany
+    - ReadWriteOnce
+    - ReadOnlyMany
+    nfs:
+      path: /export/v002
+      server: 192.168.42.1
+    persistentVolumeReclaimPolicy: Recycle
+- apiversion: v1
+  kind: PersistentVolume
+  metadata:
+    name: pv1002
+  spec:
+    capacity:
+      storage: 200Gi
+    accessModes:
+    - ReadWriteMany
+    - ReadWriteOnce
+    - ReadOnlyMany
+    nfs:
+      path: /export/v003
+      server: 192.168.42.1
+    persistentVolumeReclaimPolicy: Recycle
+- apiversion: v1
+  kind: PersistentVolume
+  metadata:
+    name: pv1003
+  spec:
+    capacity:
+      storage: 200Gi
+    accessModes:
+    - ReadWriteMany
+    - ReadWriteOnce
+    - ReadOnlyMany
+    nfs:
+      path: /export/v004
+      server: 192.168.42.1
+    persistentVolumeReclaimPolicy: Recycle
+- apiversion: v1
+  kind: PersistentVolume
+  metadata:
+    name: pv1004
+  spec:
+    capacity:
+      storage: 200Gi
+    accessModes:
+    - ReadWriteMany
+    - ReadWriteOnce
+    - ReadOnlyMany
+    nfs:
+      path: /export/v005
+      server: 192.168.42.1
     persistentVolumeReclaimPolicy: Recycle
